@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Reporte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registrar Reporte de Limpieza</h1>
+
+    <form action="panel.html" method="get">
+      <label for="tipo">Tipo de Problema:</label>
+      <select id="tipo" required>
+        <option value="">--Selecciona un tipo--</option>
+        <option value="barrido">Barrido</option>
+        <option value="residuos">Residuos</option>
+        <option value="maleza">Maleza</option>
+      </select>
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" rows="4" placeholder="Describe el problema..." required></textarea>
+
+      <div class="acciones">
+        <button type="submit">Enviar Reporte</button>
+        <button type="button" class="cancel" onclick="window.location.href='panel.html'">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

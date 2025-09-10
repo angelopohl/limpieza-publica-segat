@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Ciudadano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Panel del Ciudadano</h1>
+    <h2>Bienvenido <strong>usuario@correo.com</strong></h2>
+
+    <button onclick="window.location.href='index.html'">Salir</button>
+    <button onclick="window.location.href='reporte.html'">Nuevo Reporte</button>
+
+    <h3>Reportes Enviados:</h3>
+    <ul id="listaReportes"></ul>
+  </div>
+
+  <script>
+    function cargarReportes() {
+      let reportes = JSON.parse(localStorage.getItem("reportes")) || [];
+      const lista = document.getElementById("listaReportes");
+
+      if (reportes.length === 0) {
+        lista.innerHTML = "<p>No has enviado reportes aún.</p>";
+        return;
+      }
+
+      lista.innerHTML = "";
+      reportes.forEach((rep, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <strong>${rep.tipo}</strong> - ${rep.descripcion} <br>
+          Fecha: ${rep.fecha} | Estado: ${rep.estado}
+        `;
+        lista.appendChild(li);
+      });
+    }
+
+    cargarReportes();
+  </script>
+</body>
+</html>

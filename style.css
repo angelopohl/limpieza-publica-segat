@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f9f6; 
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #2e7d32; 
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h2 {
+  color: #388e3c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  margin: 20px 0 10px;
+  color: #2e7d32;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"],
+button:not(.cancel) {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+button[type="submit"]:hover,
+button:not(.cancel):hover {
+  background-color: #1b5e20;
+}
+
+button.cancel {
+  background-color: #ccc;
+  color: #333;
+}
+
+button.cancel:hover {
+  background-color: #999;
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  background: #e8f5e9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid #2e7d32;
+  border-radius: 8px;
+}
